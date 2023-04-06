@@ -3,7 +3,7 @@ Function to this program that solicits the user's first and last names in separa
 the function should return the appropriate name as a string. 
 Use the return values to greet the user with their full name.
 ***/
-let notifyPrompt = require('readline-sync');
+let notifyPrompt = require('readline-sync');//api to help with user prompt
 
 function getName () {
     let firstName = notifyPrompt.question(`Enter first name:\n`);
