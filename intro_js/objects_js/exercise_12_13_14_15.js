@@ -82,8 +82,8 @@ let result = bar('Victor', 'Antonina');
 
 //Variables - bar, arg1, arg2, foo, qux, result
 
-//property names - abc, def, ghi, jkl, mno, pqr
+//Object property names - abc, def, ghi, jkl, mno, pqr, 0,1,2,3 (array indexes), 0,1,2 (for inner array index)
 
-//primitive values - 'Hello', 1,2,3,4,5,6, null, NaN, 'Victoria', 'Antonina'
+//primitive values - 'Hello', 1,2,3,4,5,6, null, NaN, 'Victoria', 'Antonina', abc, def, ghi, jkl, mno, pqr
 
-//objects - bar, qux, abc, [4,5,6]
+//objects - bar, qux{}, abc, [4,5,6]
