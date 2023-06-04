@@ -33,6 +33,23 @@
 //4. Take Two - Write a for loop that iterates over all numbers from 1 to 100, and 
 //outputs the result of multiplying each element by 2.
 
-for (let i = 1; i <= 100; i += 1) {
-    console.log(i * 2);
-}
+// for (let i = 1; i <= 100; i += 1) {
+//     console.log(i * 2);
+// }
+
+//5. Looping over Array Elements - Using the code below as a starting point, write a while loop that 
+//logs the elements of array at each index, and terminates after logging the last element of the array.
+
+// let array = [1, 2, 3, 4];
+// let index = 0;
+
+// while(index < array.length) {
+//   console.log(array[index]);
+//   index += 1;
+// }
+
+
+//6. Continue - Take a moment to read the MDN documentation on the continue statement.
+//Then write a for loop that loops over the elements of the array cities and logs the length of each string 
+//to the console. If the element is null, skip forward to the next iteration without logging anything to the console.
+
