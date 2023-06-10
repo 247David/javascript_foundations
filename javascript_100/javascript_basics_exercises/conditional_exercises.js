@@ -97,3 +97,64 @@
 //   }
 
 //Ans: 'Yes!'
+
+//8. Logical Conditions 2 - Predict the output of the following code:
+
+// if (true && false) {
+//     console.log('Yes!');
+//   } else {
+//     console.log('No...');
+//   }
+
+//Ans: No...
+
+//9. Logical Conditions 3 - Without running the below code, determine what will be logged to the console
+
+// let sale = true;
+
+// let admissionPrice = !sale ? 5.25 : 3.99;
+
+// console.log('$' + admissionPrice);
+
+//Ans: $3.99
+
+//10. Determine what the following code snippet logs. First solve it in your head or on paper, 
+// and only then run it in your JavaScript console to check the result.
+
+// let speed = 0;
+// let acceleration = 24;
+// let brakingForce = 19;
+
+// let isMoving = brakingForce < acceleration && (speed > 0 || acceleration > 0);
+
+// console.log(isMoving);
+
+//Ans: True
+
+//11. Sum - Examine the example function invocation below. Write the function sum, such that it accepts 
+//two arguments and returns the sum of its arguments. You may assume that the function arguments will always 
+//be numbers.
+
+// sum(22, 10); // 32
+
+// let sum = (arg1, arg2) => arg1 + arg2;
+
+// console.log(sum(22, 10));
+
+//12. Write a function that logs Brendan Eich's quote 'Always bet on JavaScript.' to the console. 
+// What is the return value of the function?
+// Ans: 
+
+// let brendanEichQuote = function () {
+//     console.log('Always bet on JavaScript.');
+// }
+
+// brendanEichQuote();
+
+//13. Cite the Author - Let's generalize the function from the previous exercise a bit. 
+// Implement a function cite that takes two string arguments: the author of the quote and what 
+// they said. It then logs the quote to the console, as in the following example.
+
+cite('Brendan Eich', 'Always bet on JavaScript.');
+// logs:
+// Brendan Eich said: "Always bet on JavaScript."
