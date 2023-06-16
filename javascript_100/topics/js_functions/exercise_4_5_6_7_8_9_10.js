@@ -88,9 +88,6 @@ function getNumber(prompt) { //variables - getNumber, prompt
 let left = getNumber('Enter the first number: '); //variable left, getNumber
 let right = getNumber('Enter the second number: '); // variable right, getNumber
 console.log(`${left} * ${right} = ${multiply(left, right)}`); //console,left,right, multiply.. concole.log is a method in the
-//console object.
-
-
 
 /***
  
