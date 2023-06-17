@@ -1,4 +1,5 @@
-//1. What's my value? (Part 1) - What will the following code log to the console and why? Don't run it until you have tried to answer.
+//1. What's my value? (Part 1) - What will the following code log to the console and why? 
+//Don't run it until you have tried to answer.
 
 // console.log(greeting);
 
@@ -9,13 +10,17 @@
 //alt ans:
 //All variables in JavaScript declared with var are hoisted, meaning they are virtually moved to the beginning of the scope. 
 
-//2. What's my value? (Part 2) - What will the following code log to the console and why? Don't run it until you have tried to answer
+//2. What's my value? (Part 2) - What will the following code log to the console and why? 
+//Don't run it until you have tried to answer
+
 // console.log(greeting);
 
 // let greeting = 'Hello world!';
 // ReferenceError - Unlike var, let variables are not hoisted.
 
-//3. What's my value? (Part 3) - What will the following code log to the console and why? Don't run it until you have tried to answer.
+//3. What's my value? (Part 3) - What will the following code log to the console and why? 
+//Don't run it until you have tried to answer.
+
 // if (true) {
 //     let myValue = 20;
 //   }
