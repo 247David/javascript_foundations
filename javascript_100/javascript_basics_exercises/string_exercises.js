@@ -35,8 +35,41 @@
 // let string2 = 'Polar bear';
 // let string3 = 'Penguin';
 
-const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+// console.log(string1.toUpperCase() === string2.toUpperCase());
+// console.log(string2.toUpperCase() === string3.toUpperCase());
+// console.log(string1.toUpperCase() === string3.toUpperCase());
 
-console.log(paragraph);
+//6. Write code that checks whether the string byteSequence contains the character x.
 
-const regrex = /[A-Z]/g;
+// let byteSequence = 'TXkgaG92ZXJjcmFmdCBpcyBmdWxsIG9mIGVlbHMu'
+
+// console.log(byteSequence.includes('x'));
+
+//7. Write a function that checks whether a string is empty or not. For example:
+// isBlank('mars'); // false
+// isBlank('  ');   // false
+// isBlank('');     // true
+
+// function isBlank (inputString) {
+//     return (inputString.length) ? false : true ;
+// }
+
+//8. Blank? Version 2 - Change your isBlank function from the previous exercise to return true 
+//if the string is empty or only contains whitespace. For example:
+
+// function isBlank (inputString) {
+//     return inputString.trim() ? false: true;
+// }
+
+//9. Capitalize Words - Write code that capitalizes the words in the string 
+// 'launch school tech & talk', so that you get the string 'Launch School Tech & Talk'
+
+let capitalizedWords = function (string) {
+    let stringArray = string.split(' ');
+
+    capitalizedArray = stringArray.map(element => (element.charAt(0).toUpperCase()+ element.substring(1)));
+
+    return (capitalizedArray.join(' '));
+};
+
+console.log(capitalizedWords('launch school tech & talk'));
