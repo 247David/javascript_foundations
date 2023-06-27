@@ -42,7 +42,7 @@
 - 1stCharacter - Starts with a number.
 - snake_name - underscore not allows. Allowed for file names. Screaming snake case(BIG_NUMBER) for constants
 
-### _Array
+### _Array_
 
 Ordered list of elements. Each elemnet has any tpe of value. Each element has unique index number. Arrays are indexed list and ordered lists.
 
@@ -68,6 +68,12 @@ slice(start, end)
 
 splice(start, deleteCount, item1, item2, itemN)
 
-```javascript
+#### Array methods that help with loops
 
-```end
+forEach:
+```javascript
+let array = [1,2,3];
+array.forEach(function(num){
+    console.log(num);
+}); //forEach executes the function and returns undefined
+```
