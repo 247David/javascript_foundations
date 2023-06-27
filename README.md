@@ -68,12 +68,30 @@ slice(start, end)
 
 splice(start, deleteCount, item1, item2, itemN)
 
-#### Array methods that help with loops
+#### Array methods that help with iteration
 
-forEach:
+.forEach:
 ```javascript
-let array = [1,2,3];
+let numbers = [1,2,3];
 array.forEach(function(num){
     console.log(num);
-}); //forEach executes the function and returns undefined
+}); 
+//forEach executes the function and returns undefined.
+//forEach modifies/edits the 'numbers' array (which is not part of the call back function).
+```
+.map:
+Using the map function to
+```javascript
+let numbers = [1,2,3];
+let squares = numbers.map(function(num){
+    return num * num;
+});
+//map returns a new 'numbers' array.
+//map's callback function will not update the original numbers array.
+```
+.filter:
+```javascript
+let numbers = [1,2,3,4,5];
+let evenNumbers = numbers.filter(num => num % 2 === 0);
+//
 ```
