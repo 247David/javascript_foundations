@@ -56,7 +56,7 @@
 //     }
 //   }
   
-//   myFunction();
+// myFunction();
 //Ans: ReferenceError- cant  use 'a' before declaring/initailization
 
 
@@ -92,15 +92,15 @@
 // 'a' defined before the function
 
 //8. What's my value? (Part 8) - What will the following code log to the console and why? Don't run it until you have tried to answer.
-// let a = 1;
+let a = 1;
 
-// function myFunction(a) {
-//   console.log(a);
-// }
+function myFunction(a) {
+  console.log(a);
+}
 
-// let b = 2;
+let b = 2;
 
-// myFunction(b);
+myFunction(b);
 // output:
 // 2
 // Why:

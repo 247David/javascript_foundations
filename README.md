@@ -1,4 +1,4 @@
-# Non code Solutions and Notes
+# Javascript Notes
 
 ## Preparation Exercises
 
@@ -42,6 +42,10 @@
 - 1stCharacter - Starts with a number.
 - snake_name - underscore not allows. Allowed for file names. Screaming snake case(BIG_NUMBER) for constants
 
+### _String_
+
+.split() - .split('')
+
 ### _Array_
 
 Ordered list of elements. Each elemnet has any tpe of value. Each element has unique index number. Arrays are indexed list and ordered lists.
@@ -57,11 +61,15 @@ const myArrat = Object.freeze ([1,2,3]);
 ```
 Sub array(array stored in an array index) can be changed and will have to be freezed also as the main array.
 
-aray.push(element) - pushes element to array and retruns updated length e.g ('a'), array.push(null, 'xyz').
+array.length - returns array length
+
+aray.push(element) - pushes element to array and returns updated length e.g array.push('a'), array.push(null, 'xyz').
 
 array.concat(element) - adds/concatinates array(2,'abc') 
 
 array.pop() - removes and returns the last element
+
+array.shift(); //returns first element
 
 
 slice(start, end)
@@ -70,7 +78,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
 #### Array methods that help with iteration
 
-.forEach:
+.forEach
 ```javascript
 let numbers = [1,2,3];
 array.forEach(function(num){
@@ -79,7 +87,7 @@ array.forEach(function(num){
 //forEach executes the function and returns undefined.
 //forEach modifies/edits the 'numbers' array (which is not part of the call back function).
 ```
-.map:
+.map
 Using the map function to
 ```javascript
 let numbers = [1,2,3];
@@ -88,10 +96,26 @@ let squares = numbers.map(function(num){
 });
 //map returns a new 'numbers' array.
 //map's callback function will not update the original numbers array.
+["1", "2", "3"].map((string) => parseInt(string));
+//output:[1,2,3]
 ```
 .filter:
 ```javascript
 let numbers = [1,2,3,4,5];
 let evenNumbers = numbers.filter(num => num % 2 === 0);
-//
+//does not mutate the original array.
+//filter method returns new array all truthy values(pass the given condition)
+```
+.reduce
+```javascript
+reduce(function(accumulator/previouIteration,task/currentValue, index, array){
+
+});
+
+[15, 16, 17, 18, 19].reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  10,
+);
+//Above returns 95:10(initial)+15(currentValue)+...
+//forEach,map and filter can be built with the reduce method.
 ```
