@@ -55,10 +55,26 @@
 // This is a two-dimensional array or a nested array. Write some code that iterates through the sub-arrays 
 //and logs each vocabulary word to the console.
 
-let vocabulary = [
-    ['happy', 'cheerful', 'merry', 'glad'],
-    ['tired', 'sleepy', 'fatigued', 'drained'],
-    ['excited', 'eager', 'enthused', 'animated']
-  ];
+// let vocabulary = [
+//     ['happy', 'cheerful', 'merry', 'glad'],
+//     ['tired', 'sleepy', 'fatigued', 'drained'],
+//     ['excited', 'eager', 'enthused', 'animated']
+//   ];
+// Expected output:
+// happy
+// etc...
 
+// vocabulary.forEach(function(subArray){
+//   subArray.forEach(function(word){
+//     console.log(word);
+//   })
+// });
 
+//7. Equality - Predict the output of the below code. When you run the code, 
+//do you see what you expected? Why or why not?
+let array1 = [2, 6, 4];
+let array2 = [2, 6, 4];
+
+console.log(array1 === array2);
+
+//Ans: No, array are objects and when you compare objects with '===', you get false.

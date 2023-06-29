@@ -48,7 +48,7 @@
 
 ### _Array_
 
-Ordered list of elements. Each elemnet has any tpe of value. Each element has unique index number. Arrays are indexed list and ordered lists.
+Ordered list of elements. Each element has any tpe of value. Each element has unique index number. Arrays are indexed list and ordered lists.
 
 ```javascript
 const myArray = [1,2,3];
@@ -57,7 +57,7 @@ The array content is mutable.
 
 Obejct.freeze array method to make array element const. E.g:
 ```javascript
-const myArrat = Object.freeze ([1,2,3]);
+const myArray = Object.freeze ([1,2,3]);
 ```
 Sub array(array stored in an array index) can be changed and will have to be freezed also as the main array.
 
@@ -78,7 +78,7 @@ splice(start, deleteCount, item1, item2, itemN)
 
 #### Array methods that help with iteration
 
-.forEach
+.forEach:
 ```javascript
 let numbers = [1,2,3];
 array.forEach(function(num){
@@ -86,9 +86,17 @@ array.forEach(function(num){
 }); 
 //forEach executes the function and returns undefined.
 //forEach modifies/edits the 'numbers' array (which is not part of the call back function).
+//forEach method parameters: callbackFn, element, index, array, thisArg
+
 ```
-.map
-Using the map function to
+.every:
+```javascript
+
+
+//every returns true if callbackFn returns a truthy
+//every method parameters: callbackFn, element, index, array, thisArg
+```
+.map:
 ```javascript
 let numbers = [1,2,3];
 let squares = numbers.map(function(num){
@@ -96,6 +104,7 @@ let squares = numbers.map(function(num){
 });
 //map returns a new 'numbers' array.
 //map's callback function will not update the original numbers array.
+//map method paramenters: callbackFn, element, index, array, thisArg
 ["1", "2", "3"].map((string) => parseInt(string));
 //output:[1,2,3]
 ```
@@ -105,8 +114,9 @@ let numbers = [1,2,3,4,5];
 let evenNumbers = numbers.filter(num => num % 2 === 0);
 //does not mutate the original array.
 //filter method returns new array all truthy values(pass the given condition)
+//filter method paramenters: callbackFn, element, index, array(array filter() is called upon), thisArg(value of 'this')
 ```
-.reduce
+.reduce:
 ```javascript
 reduce(function(accumulator/previouIteration,task/currentValue, index, array){
 
@@ -118,4 +128,20 @@ reduce(function(accumulator/previouIteration,task/currentValue, index, array){
 );
 //Above returns 95:10(initial)+15(currentValue)+...
 //forEach,map and filter can be built with the reduce method.
+//reduce parameters: callbackFn,accumulatoe, currentValue,currentIndex,array, initialValue
+```
+Comparing Arrays:
+Using operators like '==' and '===' to compare arrays will retrun false even when they are the same just like with objects.
+The array values will have to be compared instead or arrays converted to string and the compared.
+
+```javascript
+let array1 = [1,2,3,4];
+let array2 = [1,2,3,4];
+
+console.log(array1 == array2); //output: false
+
+console.log(array1.toString() ==+ array2.toString()); // output: true ('1,2,3,4' === '1,2,3,4')
+
+console.log(JSON.stringify(array1) === JSON.stringify(array2)); //output: true ('[1,2,3,4]' === '[1,2,3,4]')
+
 ```
