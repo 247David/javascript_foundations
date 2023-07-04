@@ -91,7 +91,8 @@ array.forEach(function(num){
 ```
 .every:
 ```javascript
-
+let array1 = [1,2,3];
+let
 
 //every returns true if callbackFn returns a truthy
 //every method parameters: callbackFn, element, index, array, thisArg
@@ -105,6 +106,7 @@ let squares = numbers.map(function(num){
 //map returns a new 'numbers' array.
 //map's callback function will not update the original numbers array.
 //map method paramenters: callbackFn, element, index, array, thisArg
+
 ["1", "2", "3"].map((string) => parseInt(string));
 //output:[1,2,3]
 ```
@@ -140,7 +142,7 @@ let array2 = [1,2,3,4];
 
 console.log(array1 == array2); //output: false
 
-console.log(array1.toString() ==+ array2.toString()); // output: true ('1,2,3,4' === '1,2,3,4')
+console.log(array1.toString() === array2.toString()); // output: true ('1,2,3,4' === '1,2,3,4')
 
 console.log(JSON.stringify(array1) === JSON.stringify(array2)); //output: true ('[1,2,3,4]' === '[1,2,3,4]')
 
