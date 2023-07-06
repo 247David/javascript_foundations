@@ -46,6 +46,7 @@
 
 .split() - .split('')
 
+
 ### _Array_
 
 Ordered list of elements. Each element has any tpe of value. Each element has unique index number. Arrays are indexed list and ordered lists.
@@ -91,8 +92,24 @@ array.forEach(function(num){
 ```
 .every:
 ```javascript
-let array1 = [1,2,3];
-let
+const compareArrays = (a, b) =>
+  a.length === b.length &&
+  a.every((element, index) => element === b[index]);
+
+let array1 = [11, 22, 33];
+let array2 = [21, 22, 23];
+let array3 = [11, 22, 33];
+
+console.log(compareArrays(array1, array2)); //false
+console.log(compareArrays(array1, array3)); //true
+
+let provinces = ['Ontario', 'Alberta', 'Saskatchewan'];
+
+let contains = function (stringInput, provinces) {
+    return !provinces.every(x => x !== stringInput )
+};
+
+console.log(contains('Manitoba', provinces)); //false
 
 //every returns true if callbackFn returns a truthy
 //every method parameters: callbackFn, element, index, array, thisArg
@@ -146,4 +163,17 @@ console.log(array1.toString() === array2.toString()); // output: true ('1,2,3,4'
 
 console.log(JSON.stringify(array1) === JSON.stringify(array2)); //output: true ('[1,2,3,4]' === '[1,2,3,4]')
 
+```
+### _Side Note_
+```javascript
+typeof [1,2,3,4]; // Object: this will return Object and not array
+
+Array.isArray([1,2,3,4]); // true
+
+Array.isArray('string input'); // false
+
+```
+
+```javascript
+Array.prototype.includes()
 ```
