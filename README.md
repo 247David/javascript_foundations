@@ -70,7 +70,7 @@ array.concat(element) - adds/concatinates array(2,'abc')
 
 array.pop() - removes and returns the last element
 
-array.shift(); //returns first element
+array.shift(); returns first element
 
 
 slice(start, end)
@@ -85,6 +85,7 @@ let numbers = [1,2,3];
 array.forEach(function(num){
     console.log(num);
 }); 
+
 //forEach executes the function and returns undefined.
 //forEach modifies/edits the 'numbers' array (which is not part of the call back function).
 //forEach method parameters: callbackFn, element, index, array, thisArg
@@ -113,6 +114,13 @@ console.log(contains('Manitoba', provinces)); //false
 
 //every returns true if callbackFn returns a truthy
 //every method parameters: callbackFn, element, index, array, thisArg
+
+const nums = [80, 7, 37, 98, 12, 42];
+
+nums.every(n => n < 100); // true
+
+nums.some(n => n % 2 == 1); // true
+
 ```
 .map:
 ```javascript
@@ -176,4 +184,17 @@ Array.isArray('string input'); // false
 
 ```javascript
 Array.prototype.includes()
+```
+
+### _Functions_
+
+Default Paramenter:
+
+```javascript
+function find (name='Nemo') {
+  console.log(`Finding ${name}!`);
+}
+find()// Finding Nemo!
+find('Jesse') // Finding Jesse!
+
 ```
