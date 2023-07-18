@@ -105,3 +105,56 @@
 // console.log(catAge(2));
 // console.log(catAge(3));
 // console.log(catAge(4));
+
+
+//6. Remove Last Char - Create a function removeLastChar that takes a string as an argument, 
+// and returns the string without the last character.
+//removeLastChar('ciao!'); // 'ciao'
+// removeLastChar('hello'); // 'hell'
+
+// function removeLastChar (inputString) {
+//     return inputString.substring(0,(inputString.length - 1));
+// }
+
+//alt:
+// function removeLastChar(inputString) {
+//     return str.slice(0, -1);
+//   }
+// console.log(removeLastChar('ciao!'));
+// console.log(removeLastChar('hello'));
+
+//7 . Arrow Functions (Part 1) - Refactor the function below using arrow syntax. 
+// Line 9 should still log the same sentence.
+
+// const template = 'I VERB NOUN.';
+
+// function sentence(verb, noun) {
+//   return template
+//     .replace('VERB', verb)
+//     .replace('NOUN', noun);
+// }
+
+// let sentence = (verb, noun) => template.replace('VERB', verb).replace('NOUN', noun);
+
+// console.log(sentence('like', 'birds'));
+
+//8. Arrow Functions (Part 2) - The function initGame below returns an object. 
+//Refactor it using arrow function syntax.
+
+
+// let initGame = function () {
+//     return {
+//       level: 1,
+//       score: 0
+//     }
+//   };
+
+let initGame = () => ({
+    level: 1,
+    score: 0
+  });
+  
+  let game = initGame();
+  
+  console.log('Level: ' + game.level);
+  console.log('Score: ' + game.score);
