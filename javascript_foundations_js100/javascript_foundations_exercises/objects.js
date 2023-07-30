@@ -66,20 +66,20 @@
 
 //5. Dot Notation vs Bracket Notation - Before running any code, determine what difference 
 //there will be in the output of the two code snippets below (if any).
-let ocean = {};
-let prefix = 'Indian';
+// let ocean = {};
+// let prefix = 'Indian';
 
-ocean.prefix = 'Pacific';
+// ocean.prefix = 'Pacific';
 
-console.log(ocean); //output: {prefix:'Pacific'}
-//vs
+// console.log(ocean); //output: {prefix:'Pacific'}
+// //vs
 
-let ocean = {};
-let prefix = 'Indian';
+// let ocean = {};
+// let prefix = 'Indian';
 
-ocean[prefix] = 'Pacific';
+// ocean[prefix] = 'Pacific';
 
-console.log(ocean); // {Indian:'Pacific'}
+// console.log(ocean); // {Indian:'Pacific'}
 
 //Solution: Not the same.
 
@@ -97,7 +97,9 @@ let obj = {
   for (let prop in obj) {
     if (prop === true) {
       console.log("It's true!");
+    } else {
+      console.log('Not true');
     }
   }
 
-  //object properties are always string. When omitted
+  //Answer: Object properties are always strings. When omitted, it is added automatically.
