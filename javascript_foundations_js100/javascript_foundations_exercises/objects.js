@@ -85,21 +85,62 @@
 
 //6. Is it true? - We are experimenting with some code to get more comfortable working 
 //with objects. Run the snippet below and explain why "It's true!" is never output.
-let obj = {
-    num: 42,
-    'property name': 'string value',
-    true: false,
-    fun: function() {
-      console.log('Harr Harr!');
-    },
-  };
+// let obj = {
+//     num: 42,
+//     'property name': 'string value',
+//     true: false,
+//     fun: function() {
+//       console.log('Harr Harr!');
+//     },
+//   };
   
-  for (let prop in obj) {
-    if (prop === true) {
-      console.log("It's true!");
-    } else {
-      console.log('Not true');
-    }
-  }
+//   for (let prop in obj) {
+//     if (prop === true) {
+//       console.log("It's true!");
+//     } else {
+//       console.log('Not true');
+//     }
+//   }
 
-  //Answer: Object properties are always strings. When omitted, it is added automatically.
+//Answer: No, it is false. Object properties are always strings. When omitted, it is added automatically. So true becomes 'true'.
+
+//7. Car Keys - Write code that stores all of the vehicle property names in an array called keys.
+// let vehicle = {
+//   manufacturer: 'Tesla',
+//   model: 'Model X',
+//   year: 2015,
+//   range: 295,
+//   seats: 7
+// };
+
+// output: ['manufacturer', 'model', 'year', 'range', 'seats']
+
+// let keys = [];
+// for (let prop in vehicle) {
+//   keys.push(prop);
+// }
+// console.log(keys);
+
+//alt solution:
+// keys = Object.keys(vehicle);
+// console.log(keys);
+
+//8. Convert an object to a nested array - Convert the person object into a nested array nestedPerson, 
+//containing the same key-value pairs.
+
+let person = {
+  title: 'Duke',
+  name: 'Nukem',
+  age: 33
+};
+
+let nestedPerson = [];
+
+for (let prop in person) {
+  nestedPerson.push([prop,person[prop]]);
+}
+
+console.log(nestedPerson);
+
+// Expected output:
+// [['title', 'Duke'], ['name', 'Nukem'], ['age', 33]]
