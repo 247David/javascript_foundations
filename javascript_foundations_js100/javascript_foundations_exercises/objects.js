@@ -128,19 +128,59 @@
 //8. Convert an object to a nested array - Convert the person object into a nested array nestedPerson, 
 //containing the same key-value pairs.
 
-let person = {
-  title: 'Duke',
-  name: 'Nukem',
-  age: 33
-};
+// let person = {
+//   title: 'Duke',
+//   name: 'Nukem',
+//   age: 33
+// };
 
-let nestedPerson = [];
+// let nestedPerson = [];
 
-for (let prop in person) {
-  nestedPerson.push([prop,person[prop]]);
-}
+// for (let prop in person) {
+//   nestedPerson.push([prop,person[prop]]);
+// }
 
-console.log(nestedPerson);
+// console.log(nestedPerson);
+
 
 // Expected output:
 // [['title', 'Duke'], ['name', 'Nukem'], ['age', 33]]
+//or:
+// let nestedPerson = Object.entries(person);
+// console.log(nestedPerson);
+
+//9. ...and vice versa - Write code that does the reverse, starting from a nested 
+//array of pairs and building an object.
+// let nestedArray = [['title', 'Duke'], ['name', 'Nukem'], ['age', 33]];
+// let outputObject = {};
+// Expected output:
+// { title: 'Duke', name: 'Nukem', age: 33 }
+
+// for (let i = 0; i < nestedArray.length; i++) {
+//   outputObject[nestedArray[i][0]] = nestedArray[i][1];
+// }
+// console.log(outputObject);
+
+//or 
+// let person = Object.fromEntries(nestedArray);
+// console.log(person);
+// console.log(outputObject);
+
+//10. Cloning a Person - Write a function clone that takes an object as argument and returns a shallow 
+//copy of that argument. A shallow copy returns a new object that is a copy of the original object. 
+//However, only the object itself and any properties with primitive values are duplicated. 
+//Properties that are themselves objects are copied "by reference" -- that is, only a pointer 
+//to the object is copied.
+// For instance, consider the following object:
+let obj = {
+  number: 1,
+  string: 'abc',
+  array: [1, 2, 3],
+};
+//Ans:
+function clone (obj) {
+  return Object.assign({},obj);
+}
+
+let objCopy = clone(obj);
+console.log(objCopy);
