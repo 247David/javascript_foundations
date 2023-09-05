@@ -41,8 +41,10 @@
 
 - 1stCharacter - Starts with a number.
 - snake_name - underscore not allows. Allowed for file names. Screaming snake case(BIG_NUMBER) for constants
+
 ### Input/Output
 Make sure there is a package.json file, then install and save readline-sync.
+- npm init -y (to create package.json)
 - npm install readline-sync --save
 ```javascript
 let input = require('readline-sync');
@@ -53,6 +55,18 @@ console.log(input1);
 ### _String_
 
 .split() - .split('')
+
+Looping through a string
+```javascript
+let str = 'test';
+for(char in str){
+  console.log(str[char]);//t - current
+}
+for(char of 'happyjs'){
+  console.log(char); // h - current
+}
+
+```
 
 
 ### _Array_
