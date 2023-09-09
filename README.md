@@ -52,17 +52,21 @@ let input1 = input.question('Enter input 1');
 console.log(input1);
 
 ```
+### _Math_
+Random number - console.log(Math.floor((Math.random() * 120) + 20)); //random number between 20 and 120
+
+
 ### _String_
 
-.split() - .split('')
+.split() - .split(' ') - String splitting to array at ' ' as delimiter.
 
 Looping through a string
 ```javascript
 let str = 'test';
-for(char in str){
+for(let char in str){
   console.log(str[char]);//t - current
 }
-for(char of 'happyjs'){
+for(let char of 'happyjs'){
   console.log(char); // h - current
 }
 
@@ -86,6 +90,8 @@ Sub array(array stored in an array index) can be changed and will have to be fre
 
 array.length - returns array length
 
+.include(element) - true if element is in array
+
 aray.push(element) - pushes element to array and returns updated length e.g array.push('a'), array.push(null, 'xyz').
 
 array.concat(element) - adds/concatinates array(2,'abc') 
@@ -94,10 +100,12 @@ array.pop() - removes and returns the last element
 
 array.shift(); returns first element
 
+array.join(' ') - Converts array to string, joining with spaces ' ' as delimiter.
 
 slice(start, end)
 
 splice(start, deleteCount, item1, item2, itemN)
+
 
 #### Array methods that help with iteration
 
