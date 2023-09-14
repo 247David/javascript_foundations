@@ -216,6 +216,19 @@ Array.isArray('string input'); // false
 Array.prototype.includes()
 ```
 
+### Array Syntax
+... - Spread Operator - Used as a short form with itearable variabls(string,array,objects)
+```javascript
+const arr1 = [1,1,2,3,4,5];
+const arr2 = [6,7,8];
+const obj1 = { foo: "bar", x: 42 };
+const obj2 = {  a: 'store'}
+const obj3 = {...obj1,...obj2}
+const arr3 = [...arr1,...arr2];
+const uniqueArray = [... new Set(arr1), ...arr2];
+
+```
+
 ### _Functions_
 
 Default Paramenter:
