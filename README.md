@@ -59,6 +59,8 @@ Random number - console.log(Math.floor((Math.random() * 120) + 20)); //random nu
 ### _String_
 
 .split() - .split(' ') - String splitting to array at ' ' as delimiter.
+.length()
+.repeat()
 
 Looping through a string
 ```javascript
